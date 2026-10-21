@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  placell:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: placell_app
+    ports:
+      - "8000:8000"
+    environment:
+      - SECRET_KEY=placell-super-secret-production-key-2026-final-year
+      - ACCESS_TOKEN_EXPIRE_MINUTES=10080
+      # Optional: To use external PostgreSQL instead of embedded SQLite:
+      # - DATABASE_URL=postgresql://postgres:password@postgres:5432/placell
+    volumes:
+      # Persist SQLite database file across container restarts
+      - placell_data:/app/backend
+    restart: unless-stopped
+
+volumes:
+  placell_data:
