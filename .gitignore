@@ -39,3 +39,33 @@ Thumbs.db
 # Unrelated standalone projects in workspace
 google_marketing_analysis/
 InsightAI/
+esp32_petrol_tank_monitor/
+datastraw/
+datastraw.zip
+legacy_placell_backend/
+legacy_placell_frontend/
+
+# Local database files from other projects
+rosteriq.db
+backend/rosteriq.db
+
+# Playwright & test artifacts
+.playwright_browsers/
+frontend/test-results/
+
+# Standalone local documents & workspace assets
+FINAL_YEAR_BLACKBOOK_ALIGNED.*
+*.docx
+*.pdf
+aligned_report_builder.py
+build_aligned_blackbook.py
+build_aligned_docx.py
+extracted_assets/
+extracted_docx_text.txt
+extracted_full_pdf_text.txt
+outputs/
+pdf_page_previews/
+uploads/
+backend/.env
+frontend/.env
+
